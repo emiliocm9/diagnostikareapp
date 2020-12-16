@@ -1,0 +1,2 @@
+class AptMailer < ApplicationMailer
+end
