@@ -2,13 +2,13 @@
 
 This project was carried out according to the specifications given by Diagnostikare. In this repository, you can find the source code of an Ruby on Rails APP that was developed based on a design provided by the same Diagnostikare team, whose purpose is to evaluate the performance of the applicants to the job offered by the company.
 
-![Index](app\assets\images\IndexSS.PNG)
+![Index](https://github.com/emiliocm9/diagnostikareapp/blob/develop/app/assets/images/IndexSS.PNG)
 
-![Login](app\assets\images\Login.PNG)
+![Login](https://github.com/emiliocm9/diagnostikareapp/blob/develop/app/assets/images/Login.PNG)
 
-![SignUp](app\assets\images\Sign_Up.PNG)
+![SignUp](https://github.com/emiliocm9/diagnostikareapp/blob/develop/app/assets/images/Sign_Up.PNG)
 
-![SignUp](app\assets\images\NewReport.PNG)
+![SignUp](https://github.com/emiliocm9/diagnostikareapp/blob/develop/app/assets/images/NewReport.PNG)
 
 ## Built With
 
