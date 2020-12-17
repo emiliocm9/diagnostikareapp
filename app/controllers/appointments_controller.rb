@@ -1,5 +1,5 @@
 class AppointmentsController < ApplicationController
-  before_action :set_appointment, only: [:show, :edit, :update, :destroy]
+  before_action :set_appointment, only: %i[show edit update destroy]
 
   # GET /appointments
   # GET /appointments.json
@@ -9,8 +9,7 @@ class AppointmentsController < ApplicationController
 
   # GET /appointments/1
   # GET /appointments/1.json
-  def show
-  end
+  def show; end
 
   # GET /appointments/new
   def new
@@ -18,8 +17,7 @@ class AppointmentsController < ApplicationController
   end
 
   # GET /appointments/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /appointments
   # POST /appointments.json
@@ -63,13 +61,14 @@ class AppointmentsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_appointment
-      @appointment = Appointment.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def appointment_params
-      params.require(:appointment).permit(:time, :user_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_appointment
+    @appointment = Appointment.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def appointment_params
+    params.require(:appointment).permit(:time, :user_id)
+  end
 end
