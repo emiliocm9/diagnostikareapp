@@ -28,6 +28,7 @@ class AppointmentsController < ApplicationController
 
     respond_to do |format|
       if @appointment.save
+        AptMailer.with(appointment: @appointment).new_appointment_email.deliver
         format.html { redirect_to root_path, notice: 'Appointment was successfully created.' }
         format.json { render :show, status: :created, location: @appointment }
       else

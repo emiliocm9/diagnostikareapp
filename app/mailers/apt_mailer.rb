@@ -1,6 +1,8 @@
 class AptMailer < ApplicationMailer
-  def new_appointment_email(user)
+  def new_appointment_email
     @appointment = params[:appointment]
-    mail(to: user.email, subject: "You have scheduled a new appointment!")
+    @date = @appointment.time.strftime("%A"" ""%d"" ""%Y")
+
+    mail(to: 'pacheco', subject: "You have scheduled a new appointment!")
   end
 end
