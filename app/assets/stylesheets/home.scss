@@ -1,3 +1,64 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.jumbotron {
+  background: #6f5499;
+  background: -webkit-gradient(linear, left top, right bottom, from(#7b5fa7), to(#634b89));
+  background: linear-gradient(to bottom right, #7b5fa7, #634b89);
+  color: white;
+}
+
+.jumbotron p {
+  margin: 0 auto 1.875rem;
+}
+
+.jumbotron p.lead {
+  width: 80%;
+  font-size: 1.875rem;
+}
+
+.jumbotron .version {
+  margin-top: -0.9375rem;
+  margin-bottom: 1.875rem;
+  color: #9780b9;
+  font-size: 0.875rem;
+}
+
+.btn:focus {
+  color: white;
+}
+
+.btn-outline-inverse {
+  color: #fff;
+  background-color: transparent;
+  border-color: #bfb2d4;
+  font-size: 1rem;
+}
+
+.btn-outline-inverse:hover {
+  background-color: white;
+  border-color: white;
+  color: #554075;
+}
+
+.bs-booticon {
+  display: block;
+  margin: 0 auto 1.875rem;
+  background-color: #563d7c;
+  border-radius: 15%;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+}
+
+.bs-booticon-lg {
+  height: 9rem;
+  width: 9rem;
+  font-size: 6.75rem;
+  line-height: 8.75rem;
+}
+
+.bs-booticon-outline {
+  background-color: transparent;
+  border: 1px solid #bfb2d4;
+}

@@ -1,4 +1,25 @@
-<h1>Home#index</h1>
+<div class="jumbotron">
+  <div class="container text-center"><span class="bs-booticon bs-booticon-lg bs-booticon-outline">D</span>
+    <p class="lead">Welcome back</p>
+    <p><%= link_to 'Report Symptoms', new_report_path, class: 'btn btn-outline-inverse btn-lg text-light' %></p>
+    <%= link_to 'Edit user', edit_user_registration_path, class:"version" %>
+  </div>
+</div>
+
+
+<div class="container-fluid jumbo-pack d-flex justify-content-center mt-3 mb-3">
+    <div class="jumbotronh0 d-none d-md-block">
+      <%= link_to 'Logout', destroy_user_session_path, method: :delete, class:"link-user" %>
+    </div>
+    <div class="jumbotronh11">
+      <h1 class="jumbotronh1" data-label="Dear User">
+        <span aria-label="Wel"></span>
+        <span aria-label="come"></span>
+      </h1>
+    </div>
+    <div class="jumbotronh2 d-none d-md-block">
+      <%= link_to 'Edit user', edit_user_registration_path, class:"version" %>
+    </div>
+</div>
 <p>Find me in app/views/home/index.html.erb</p>
-<%= link_to 'Logout', destroy_user_session_path, method: :delete %>
-<%= link_to 'New Report', new_report_path %>
+<%= link_to 'New Report', new_report_path, class: 'btn btn-outline-inverse btn-lg' %>
