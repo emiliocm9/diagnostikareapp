@@ -1,4 +1,8 @@
 class HomeController < ApplicationController
   before_action :authenticate_user!
-  def index; end
+  def index
+    @reports = current_user.reports.order("created_at DESC")
+    @previous_apt = current_user.appointments.where("time < ?", 1.days.ago)
+    @future_apt = current_user.appointments.where("time > ?", 1.days.ago)
+  end
 end

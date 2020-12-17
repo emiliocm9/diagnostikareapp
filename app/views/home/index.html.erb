@@ -12,5 +12,40 @@
       <%= link_to 'Logout', destroy_user_session_path, method: :delete, class:"link-user" %>
     </div>
 </div>
-<p>Find me in app/views/home/index.html.erb</p>
-<%= link_to 'New Report', new_report_path, class: 'btn btn-outline-inverse btn-lg' %>
+
+<div class="container-fluid text-center">
+    <h1>Your symptom reports</h1>
+</div>
+<ul class="list-group">
+    <% @reports.each do |report| %>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <%= report.symptoms %>
+          <span class="badge bg-primary rounded-pill"><%= report.created_at.strftime('%A %d %Y')%></span>
+        </li>
+    <% end %>
+</ul>
+
+<div class="container-fluid d-flex align-items-center mt-5">
+    <div class="col-6">
+        <h3>Previous appointments</h3>
+        <ul class="list-group">
+            <% @previous_apt.each_with_index do |apt, idx| %>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  <%= apt.time.strftime('%A %d %Y')%>
+                  <span class="badge bg-primary rounded-pill"><%= idx %></span>
+                </li>
+            <% end %>
+        </ul>
+    </div>
+    <div class="col-6">
+        <h3>Future appointments</h3>
+        <ul class="list-group">
+            <% @future_apt.each_with_index do |apt, idx| %>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                  <%= apt.time.strftime('%A %d %Y')%>
+                  <span class="badge bg-primary rounded-pill"><%= idx %></span>
+                </li>
+            <% end %>
+        </ul>
+    </div>
+</div>
