@@ -1,5 +1,5 @@
 class AptMailer < ApplicationMailer
-  def new_appointment_email
+  def new_appointment_email(user)
     @appointment = params[:appointment]
     @date = @appointment.time.strftime("%A"" ""%d"" ""%Y")
 
