@@ -16,7 +16,7 @@ RSpec.describe User, type: :model do
   end
   it 'is db authenticable' do
     user = User.create(
-      email: 'test@example.com', 
+      email: 'test@example.com',
       password: 'password123',
       password_confirmation: 'password123'
     )
